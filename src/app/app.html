@@ -1,0 +1,21 @@
+
+<!-- one way binding {{}}  - სტრინგის ინტერპოლაცია  ${} -->
+<!-- ფროფერთი ბაინდინგი [] -->
+
+
+<h1>hello {{name}}</h1>
+
+
+<img [src]="photo" alt="">
+<a [href]="link">go to link</a>
+<input type="text" [placeholder]="hint">
+
+<p>{{obj.subject}}  {{obj.grade}}</p>
+
+
+@for (item of arr; track $index) {
+  <p>{{item}}</p>
+}
+
+
+
