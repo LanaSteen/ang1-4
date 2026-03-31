@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../models/product';
+import { Categories, Product } from '../models/product';
 import { FormsModule } from '@angular/forms';
 
 
@@ -22,6 +22,18 @@ export class Restaurant {
   }
 
 
+  asc = "Asc"
+
+
+  sortPrice(){
+
+      this.asc == "Asc" ? this.asc = "Desc" : this.asc = "Asc"
+      if(this.asc == "Desc"){
+          this.filterproducts = [...this.products].sort((a,b)=> a.price - b.price)
+      }else{
+          this.filterproducts = [...this.products].sort((a,b)=> b.price - a.price)
+      }
+  }
 
   getid(obj : Product){
 
@@ -29,7 +41,50 @@ export class Restaurant {
     
   }
 
+  filterByCategory(obj : Categories){
+
+     this.filterproducts = this.products.filter(el => el.categoryId == obj.id)
+  }
+
   filterproducts : Product[]=[]
+
+  categories : Categories[] =[
+
+  {
+    "id": 1,
+    "name": "Salads"
+  },
+  {
+    "id": 2,
+    "name": "Soups"
+  },
+  {
+    "id": 3,
+    "name": "Chicken-Dishes"
+  },
+  {
+    "id": 4,
+    "name": "Beef-Dishes"
+  },
+  {
+    "id": 5,
+    "name": "Seafood-Dishes"
+  },
+  {
+    "id": 6,
+    "name": "Vegetable-Dishes"
+  },
+  {
+    "id": 7,
+    "name": "Bits&Bites"
+  },
+  {
+    "id": 8,
+    "name": "On-The-Side"
+  }
+]
+
+
   products :Product[] = [
   {
     "id": 1,
@@ -48,7 +103,7 @@ export class Restaurant {
     "nuts": false,
     "image": "https://course-jsbasic.javascript.ru/assets/products/som_tam_papaya_salad.png",
     "vegeterian": true,
-    "spiciness": 0,
+    "spiciness": 4,
     "categoryId": 1
   },
   {
@@ -307,3 +362,30 @@ export class Restaurant {
 
 
 }
+
+
+
+
+
+
+
+// let x = 5
+// let y = x
+
+
+// // 5 5
+
+
+// x = 10
+
+// // x 10 
+// // y 5
+
+
+
+// let z = [10,20,30] ///  c/user/dsdgfh
+// let c = [...z]   //  c/user/dsdgfh
+
+
+// [10,20,30]
+

@@ -3,6 +3,17 @@
 
 <!-- two way binding [()] -->
 
+
+<button (click)="sortPrice()">{{asc}}</button>
+
+
+@for (item of categories; track $index) {
+
+  <button (click)="filterByCategory(item)">{{item.name}}</button>
+}
+
+
+
 <input type="text" [(ngModel)]="rame" (ngModelChange)="filter()">
 <h1>{{rame}}</h1>
 

@@ -5,6 +5,7 @@ import { Footer } from './footer/footer';
 import { Header } from './header/header';
 import { Home } from "./home/home";
 import { Restaurant } from './restaurant/restaurant';
+import { Todo } from './todo/todo';
 
 
 
@@ -13,7 +14,7 @@ import { Restaurant } from './restaurant/restaurant';
   // imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Footer, Header, RouterOutlet, Home, Restaurant]
+  imports: [Footer, Header, RouterOutlet, Home, Restaurant, Todo]
 })
 
 

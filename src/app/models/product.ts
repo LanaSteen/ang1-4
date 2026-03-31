@@ -2,7 +2,7 @@
 export class Product {
   id! : number;
   name? : string;
-  price? : number;
+  price! : number;
   nuts? : boolean;
   image? : string;
   vegeterian? : boolean;
@@ -18,6 +18,20 @@ export enum spicinessEnum {
   moreSpice = 3,
   maxSpice = 4
 }
+
+export class Categories{
+    id! : number;
+    name! : string
+
+}
+
+
+
+
+  // {
+  //   "id": 1,
+  //   "name": "Salads"
+  // },
 
 
 // {
