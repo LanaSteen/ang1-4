@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
+import { Todo } from "../todo/todo";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [Todo],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home {
+  constructor(private rame : ActivatedRoute){}
+
+
+  ngOnInit(){
+      this.rame.queryParams.subscribe((el:any) => {
+        console.log(el.id);
+      })
+  }
+
+
+
   // let const function
   numbers = [20,30,60,30,50]
 

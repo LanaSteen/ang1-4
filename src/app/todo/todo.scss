@@ -3,3 +3,107 @@
 .completed{
     text-decoration: line-through;
 }
+
+:host {
+  display: block;
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  margin: 5px 5px 10px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4CAF50;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* Special buttons */
+button:nth-child(1) {
+  background: #2196F3;
+}
+
+button:nth-child(1):hover {
+  background: #1976d2;
+}
+
+/* List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Task item */
+li {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Task text */
+li span:first-child {
+  flex: 1;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Action buttons */
+li button {
+  background: #eee;
+  color: #333;
+}
+
+li button:hover {
+  background: #ddd;
+}
+
+/* Delete button */
+li button:last-child {
+  background: #ff4d4d;
+  color: white;
+}
+
+li button:last-child:hover {
+  background: #e60000;
+}

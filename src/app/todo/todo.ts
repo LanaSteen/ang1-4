@@ -20,31 +20,54 @@ export class Todo {
     
   }
 
-priority = 0
+  priority = 0
+  addText = "Add Task"
 
   newTask = ""
   tasks :Task[] =[]
   comp = "Comlete"
+  textForSortBtn = "sort by priority asc"
 
+  sort(){
+    if(this.textForSortBtn == "sort by priority asc"){
+      this.tasks.sort((a,b) =>
+       b.priority - a.priority)
+      this.textForSortBtn = "sort by priority desc"
+    }else {
+      this.textForSortBtn = "sort by priority asc"
+      this.tasks.sort((a,b) =>
+        a.priority- b.priority )
+    }
+  }
+
+
+  edit(titile : string, priority : number, ind : number){
+      this.deleteTask(ind)
+      this.newTask = titile
+      this.priority = priority
+      this.addText = "Save Changes"
+  }
   addTask(){
+
+   this.addText = "Add Task"
+   if(this.newTask !=""){
+      
     this.tasks.push({
       id : this.tasks.length+1,
       title : this.newTask,
       completed : false,
-     ptiority : this.priority
+      priority : this.priority
 
     })
-
-    console.log(this.tasks);
-    
     this.newTask = ""
+    this.priority = 0
     localStorage.setItem("tasks", JSON.stringify(this.tasks))
+     }
   }
   
   deleteTask(index : number){
-      // this.tasks.splice(index,1)
-
-      this.tasks = this.tasks.filter(el => el.id!=index)
+      this.tasks.splice(index,1)
+      // this.tasks = this.tasks.filter(el => el.id!=index)
      localStorage.setItem("tasks", JSON.stringify(this.tasks))
   }
 
