@@ -1,0 +1,22 @@
+<p>forms works!</p>
+
+<!-- <form #rameForm="ngForm" (ngSubmit)="formLoogin(rameForm.value)">
+    <input type="text" name="phoneNumber" id=""  ngModel   required="">
+    <input type="text" name="password" id=""  ngModel  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" minlength="8" required>
+    @if(rameForm.controls['password'].errors){
+
+        <p>password is not valid</p>
+    }
+    <button [disabled]="rameForm.invalid">Ok</button>
+  </form> -->
+
+<!-- {
+  "phoneNumber" : fgggh,
+  "password"  : dsdfhgf
+} -->
+
+<form [formGroup]="Myform" (ngSubmit)="formLoogin()">
+  <input type="text" name="" id="" formControlName="phoneNumber" />
+  <input type="password" name="" id="" formControlName="password" />
+  <button>ok</button>
+</form>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, RouterLink } from "@angular/router";
 
@@ -9,7 +10,7 @@ import { Router, RouterLink } from "@angular/router";
 })
 export class Error {
 
-  constructor(private x :Router  ){
+  constructor(private x :Router ){
     console.log(this.x);
     
   }

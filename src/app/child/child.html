@@ -1,0 +1,17 @@
+
+
+<button (click)="sendInfoToParent()">{{childInfo}}</button>
+
+
+
+
+<p> {{text  | lowercase }}</p>
+<h1>{{date | date:'fullDate'}}</h1>
+<h1>{{date | date:'shortDate'}}</h1>
+
+
+<h2>{{amount | currency}}</h2>
+
+<h2>{{amount | currency:"EUR"}}</h2>
+<h2>{{amount | currency:"₾"}}</h2>
+<h2>{{amount | currency:"GBP"}}</h2>

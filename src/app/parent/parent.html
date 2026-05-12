@@ -1,0 +1,8 @@
+
+
+<app-child [childInfo]="'gamarjoba'" (infoFromChild)="getInfoFromChild($event)"></app-child>
+
+
+<app-child [childInfo]="infofromParent" (infoFromChild)="getInfoFromChild($event)"></app-child>
+
+<app-child [childInfo]="!userValid ? 'log in' : 'log out'" (infoFromChild)="getInfoFromChild($event)"></app-child>

@@ -19,6 +19,13 @@ export class Home {
   }
 
 
+  // srp   
+  // spa
+  // routing    -  router outleti
+  // query params - 
+  // input 
+  // output  
+
 
   // let const function
   numbers = [20,30,60,30,50]
