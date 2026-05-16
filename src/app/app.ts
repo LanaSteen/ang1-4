@@ -9,8 +9,6 @@ import { Todo } from './todo/todo';
 import { Parent } from './parent/parent';
 import { Forms } from './forms/forms';
 
-
-
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
@@ -22,7 +20,8 @@ import { Forms } from './forms/forms';
 
 export class App {
 
-  
+
+
 }
 
 
